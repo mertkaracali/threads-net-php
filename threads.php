@@ -32,7 +32,6 @@ class Threads
 		if (!empty($post)) {
 			curl_setopt($ch, CURLOPT_POSTFIELDS, @http_build_query($params));
 		}
-		print_r(http_build_query($params));
 		$ret = curl_exec($ch);
 		curl_close($ch);
 		return $ret;
